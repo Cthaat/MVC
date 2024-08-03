@@ -47,11 +47,11 @@ public class userController
 
     @RequestMapping ("/getUser")
     @ResponseBody
-    public user getUser()
+    public user getUser(String name , int age)
     {
         user user = new user();
-        user.setName("Edge");
-        user.setAge(25);
+        user.setName(name);
+        user.setAge(age);
         return user;
     }
 }
