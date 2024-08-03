@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class userController
 {
-    @RequestMapping (value = "/users", method = RequestMethod.GET)
+    @RequestMapping (value = "/users", method = RequestMethod.POST)
     @ResponseBody
-    public String login()
+    public String save()
     {
         System.out.println("save");
-        return "login";
+        return "save";
     }
 
 }
