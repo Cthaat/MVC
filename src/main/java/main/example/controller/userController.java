@@ -26,7 +26,7 @@ public class userController
 
     @RequestMapping (value = "/users", method = RequestMethod.DELETE)
     @ResponseBody
-    public String delete()
+    public String delete(Integer id)
     {
         System.out.println("delete");
         return "delete";
