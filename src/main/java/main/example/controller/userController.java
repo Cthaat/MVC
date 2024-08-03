@@ -1,9 +1,13 @@
 package main.example.controller;
 
+import main.example.user.user;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * @Description: user
@@ -31,5 +35,23 @@ public class userController
     {
         System.out.println(name);
         return "{'success':true} , 'data':'" + name + "'";
+    }
+
+    @RequestMapping ("/likes")
+    @ResponseBody
+    public String likes(@RequestBody List<String> likes)
+    {
+        System.out.println(likes);
+        return "{'success':true} , 'data':'" + likes + "'";
+    }
+
+    @RequestMapping ("/getUser")
+    @ResponseBody
+    public user getUser()
+    {
+        user user = new user();
+        user.setName("Edge");
+        user.setAge(25);
+        return user;
     }
 }
