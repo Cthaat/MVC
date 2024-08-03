@@ -35,7 +35,7 @@ public class userController
         return "put";
     }
 
-    @GetMapping
+    @GetMapping (value = "/{id}")
     public String select(@PathVariable Integer id)
     {
         System.out.println("get " + id);
