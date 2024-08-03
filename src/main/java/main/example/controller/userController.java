@@ -28,7 +28,7 @@ public class userController
         return "delete " + id;
     }
 
-    @RequestMapping (method = RequestMethod.PUT)
+    @PutMapping (method = RequestMethod.PUT)
     public String put()
     {
         System.out.println("put");
