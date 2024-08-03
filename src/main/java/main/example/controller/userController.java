@@ -34,7 +34,7 @@ public class userController
         return "delete " + id;
     }
 
-    @RequestMapping (value = "/users", method = RequestMethod.PUT)
+    @RequestMapping (method = RequestMethod.PUT)
     @ResponseBody
     public String put()
     {
