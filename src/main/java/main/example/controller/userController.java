@@ -24,4 +24,11 @@ public class userController
         return "save";
     }
 
+    @RequestMapping (value = "/users", method = RequestMethod.DELETE)
+    @ResponseBody
+    public String delete()
+    {
+        System.out.println("delete");
+        return "delete";
+    }
 }
