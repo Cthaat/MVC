@@ -1,7 +1,6 @@
 package main.example.config;
 
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @Description: mvc
@@ -11,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @Version: 1.0
  */
 
-@Configuration
+//@Configuration
 @ComponentScan ("main.example.controller")
 public class MVCConfig
 {

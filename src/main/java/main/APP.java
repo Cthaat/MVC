@@ -17,6 +17,7 @@ public class APP
     {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(springConfig.class);
-        context.getBean(userController.class);
+        context.refresh();
+        System.out.println(context.getBean(userController.class));
     }
 }

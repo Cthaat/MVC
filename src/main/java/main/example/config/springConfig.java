@@ -2,6 +2,8 @@ package main.example.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.stereotype.Controller;
 
 /**
  * @Description: spring
@@ -12,7 +14,12 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration
-@ComponentScan (value = "main.example")
+@ComponentScan (value = "main.example",
+        excludeFilters = @ComponentScan.Filter (
+                type = FilterType.ANNOTATION,
+                value = Controller.class
+        )
+)
 public class springConfig
 {
 }
