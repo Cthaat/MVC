@@ -30,6 +30,8 @@ public class servletContainersInitConfig extends AbstractDispatcherServletInitia
     @Override
     protected WebApplicationContext createRootApplicationContext()
     {
-        return null;
+        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+        context.register(springConfig.class);
+        return context;
     }
 }

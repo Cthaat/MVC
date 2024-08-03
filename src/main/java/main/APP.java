@@ -1,6 +1,6 @@
 package main;
 
-import main.example.config.MVCConfig;
+import main.example.config.springConfig;
 import main.example.controller.userController;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -16,7 +16,7 @@ public class APP
     public static void main(String[] args)
     {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.register(MVCConfig.class);
+        context.register(springConfig.class);
         context.getBean(userController.class);
     }
 }
