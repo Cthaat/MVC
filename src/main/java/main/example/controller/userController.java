@@ -42,7 +42,7 @@ public class userController
         return "put";
     }
 
-    @RequestMapping (value = "/users/{id}", method = RequestMethod.GET)
+    @RequestMapping (value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     public String select(@PathVariable Integer id)
     {
