@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
+@RequestMapping ("/api")
 public class userController
 {
     @RequestMapping (value = "/users", method = RequestMethod.POST)
