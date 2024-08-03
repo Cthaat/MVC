@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping ("/users")
 public class userController
 {
-    @RequestMapping (value = "/users", method = RequestMethod.POST)
+    @RequestMapping (method = RequestMethod.POST)
     @ResponseBody
     public String save()
     {
