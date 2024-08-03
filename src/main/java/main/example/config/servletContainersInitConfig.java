@@ -1,8 +1,9 @@
 package main.example.config;
 
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.servlet.support.AbstractDispatcherServletInitializer;
+import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import javax.servlet.Filter;
 
 /**
  * @Description: config
@@ -11,27 +12,33 @@ import org.springframework.web.servlet.support.AbstractDispatcherServletInitiali
  * @Date: 2024/8/3 13:20
  * @Version: 1.0
  */
-public class servletContainersInitConfig extends AbstractDispatcherServletInitializer
+public class servletContainersInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer
 {
+
     @Override
-    protected WebApplicationContext createServletApplicationContext()
+    protected Class<?>[] getRootConfigClasses()
     {
-        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.register(MVCConfig.class);
-        return context;
+        return new Class[0];
+    }
+
+    @Override
+    protected Class<?>[] getServletConfigClasses()
+    {
+        return new Class[] {MVCConfig.class};
     }
 
     @Override
     protected String[] getServletMappings()
     {
-        return new String[]{"/"};
+        return new String[] {"/"};
     }
 
     @Override
-    protected WebApplicationContext createRootApplicationContext()
+    protected Filter[] getServletFilters()
     {
-        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.register(springConfig.class);
-        return context;
+        CharacterEncodingFilter filter = new CharacterEncodingFilter();
+        filter.setEncoding("UTF-8");
+        filter.setForceEncoding(true);
+        return new Filter[] {filter};
     }
 }

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
+@RequestMapping ("/user")
 public class userController
 {
     @RequestMapping ("/login")
@@ -21,5 +22,13 @@ public class userController
     {
         System.out.println("login");
         return "login";
+    }
+
+    @RequestMapping ("/getName")
+    @ResponseBody
+    public String getName(String name)
+    {
+        System.out.println(name);
+        return "{'success':true} , 'data':'" + name + "'";
     }
 }
