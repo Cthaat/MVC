@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping ("/users")
 public class userController
 {
-    @PostMapping
+
     public String save()
     {
         System.out.println("save");
