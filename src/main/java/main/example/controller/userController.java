@@ -1,9 +1,6 @@
 package main.example.controller;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Description: user
@@ -17,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping ("/users")
 public class userController
 {
-    @RequestMapping (method = RequestMethod.POST)
+    @PostMapping
     public String save()
     {
         System.out.println("save");
