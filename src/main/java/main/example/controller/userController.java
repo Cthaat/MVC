@@ -45,7 +45,7 @@ public class userController
     @ResponseBody
     public String select(@PathVariable Integer id)
     {
-        System.out.println("put");
+        System.out.println("get ");
         return "put";
     }
 }
