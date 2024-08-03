@@ -32,11 +32,11 @@ public class userController
         return "delete";
     }
 
-    @RequestMapping (value = "/users", method = RequestMethod.POST)
+    @RequestMapping (value = "/users", method = RequestMethod.PUT)
     @ResponseBody
-    public String save()
+    public String put()
     {
-        System.out.println("save");
-        return "save";
+        System.out.println("put");
+        return "put";
     }
 }
