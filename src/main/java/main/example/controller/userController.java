@@ -21,7 +21,7 @@ public class userController
         return "save";
     }
 
-    @RequestMapping (value = "/{id}", method = RequestMethod.DELETE)
+    @RequestMapping
     public String delete(@PathVariable Integer id)
     {
         System.out.println("delete " + id);
