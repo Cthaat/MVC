@@ -1,10 +1,9 @@
 package main.example.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @Description: user
@@ -14,8 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @Version: 1.0
  */
 
-@Controller
-@ResponseBody
+@RestController
 @RequestMapping ("/users")
 public class userController
 {
