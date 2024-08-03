@@ -2,6 +2,7 @@ package main.example.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -26,7 +27,7 @@ public class userController
 
     @RequestMapping ("/getName")
     @ResponseBody
-    public String getName(String name)
+    public String getName(@RequestParam ("name") String name)
     {
         System.out.println(name);
         return "{'success':true} , 'data':'" + name + "'";
