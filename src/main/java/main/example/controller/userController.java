@@ -29,7 +29,7 @@ public class userController
     @ResponseBody
     public String delete(@PathVariable Integer id)
     {
-        System.out.println("delete" + id);
+        System.out.println("delete " + id);
         return "delete " + id;
     }
 
