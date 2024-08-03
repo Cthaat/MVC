@@ -31,4 +31,12 @@ public class userController
         System.out.println("delete");
         return "delete";
     }
+
+    @RequestMapping (value = "/users", method = RequestMethod.POST)
+    @ResponseBody
+    public String save()
+    {
+        System.out.println("save");
+        return "save";
+    }
 }
