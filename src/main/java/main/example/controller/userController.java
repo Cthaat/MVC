@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @Description: user
- * @ClassName: userComtroller
+ * @ClassName: userController
  * @Author: Edge
  * @Date: 2024/8/3 13:17
  * @Version: 1.0
