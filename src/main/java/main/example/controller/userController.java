@@ -40,4 +40,12 @@ public class userController
         System.out.println("put");
         return "put";
     }
+
+    @RequestMapping (value = "/users", method = RequestMethod.PUT)
+    @ResponseBody
+    public String put()
+    {
+        System.out.println("put");
+        return "put";
+    }
 }
