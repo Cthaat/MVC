@@ -1,6 +1,7 @@
 package main.example.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,10 +27,10 @@ public class userController
 
     @RequestMapping (value = "/users", method = RequestMethod.DELETE)
     @ResponseBody
-    public String delete(Integer id)
+    public String delete(@PathVariable Integer id)
     {
-        System.out.println("delete");
-        return "delete";
+        System.out.println("delete" + id);
+        return "delete " + id;
     }
 
     @RequestMapping (value = "/users", method = RequestMethod.PUT)
