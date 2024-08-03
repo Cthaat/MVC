@@ -35,7 +35,6 @@ public class userController
     }
 
     @RequestMapping (method = RequestMethod.PUT)
-    @ResponseBody
     public String put()
     {
         System.out.println("put");
@@ -43,7 +42,6 @@ public class userController
     }
 
     @RequestMapping (value = "/{id}", method = RequestMethod.GET)
-    @ResponseBody
     public String select(@PathVariable Integer id)
     {
         System.out.println("get " + id);
