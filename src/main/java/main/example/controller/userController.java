@@ -25,7 +25,7 @@ public class userController
         return "save";
     }
 
-    @RequestMapping (value = "/users", method = RequestMethod.DELETE)
+    @RequestMapping (value = "/users/{id}", method = RequestMethod.DELETE)
     @ResponseBody
     public String delete(@PathVariable Integer id)
     {
